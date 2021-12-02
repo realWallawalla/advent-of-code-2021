@@ -12,7 +12,6 @@ def getSolutionPart2(data):
     count = 0
     for i in range(1, len(data)):
         if sum(data[i:i+3]) > sum(data[i-1:i+2]): count += 1
-    print(count)
     return count
 
 with open('input.txt') as f:
