@@ -16,7 +16,7 @@ public class App {
   }
 
   public Integer getSolutionPart2(List<Line> lines) {
-    return paintGrid((List<Line>) lines);
+    return paintGrid(lines);
   }
 
   private Integer paintGrid(List<Line> lines) {
