@@ -1,4 +1,32 @@
-# Ignore everything in this directory
-*
-# Except this file
-!.gitignore
+
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+bin/
+
+# Gradle wrapper jar needs to be included
+!gradle-wrapper.jar
+
+# Eclipse crap
+.settings/
+.project
+.classpath
+
+
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# IDE
+.idea/
+*.iml
