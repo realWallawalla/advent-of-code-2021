@@ -50,7 +50,26 @@ fun incNeighborsAndCount(octupus: Octopus, grid: Array<Array<Octopus>>, hasFlash
 }
 
 private fun solutionPart2(grid: Array<Array<Octopus>>): Int {
-    return 2
+    val yMax = grid.size
+    val xMax = grid[0].size
+    val numberOfOctopuses = yMax * xMax
+    var hasFlashed = mutableSetOf<Octopus>()
+    var stepCounter = 0
+
+    while (hasFlashed.size != numberOfOctopuses) {
+        hasFlashed = mutableSetOf()
+        for (y in 0 until yMax) {
+            for (x in 0 until xMax) {
+                val octopus = grid[y][x]
+                if (!hasFlashed.contains(octopus)) {
+                    octopus.energyLevel += 1
+                }
+                incNeighborsAndCount(octopus, grid, hasFlashed)
+            }
+        }
+        stepCounter += 1
+    }
+    return stepCounter
 }
 
 data class Octopus(var energyLevel: Int, val x: Int, val y: Int) {
