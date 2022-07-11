@@ -10,10 +10,12 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+    maven(url = "https://repo.kotlin.link")
 }
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("space.kscience:plotlykt-core:0.5.0")
 }
 
 tasks.test {
